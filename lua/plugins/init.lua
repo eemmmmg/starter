@@ -7,23 +7,6 @@ return {
 
   -- These are some examples, uncomment them if you want to see them work!
   {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
-  },
-
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "vim", "lua", "vimdoc",
-        "html", "css", "kotlin", "java"
-      },
-    },
-  },
-
-  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -36,7 +19,26 @@ return {
         "ktlint",
         "ktfmt",
         "kotlin-debug-adapter",
-        "java-debug-adapter"
+        "java-debug-adapter",
+        "csharp-language-server",
+        "csharpier",
+        "google-java-format"
+      },
+      automatic_installation = true,
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "configs.lspconfig"
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim", "lua", "vimdoc",
+        "html", "css", "kotlin", "java", "c_sharp"
       },
     },
   }
