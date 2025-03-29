@@ -3,7 +3,8 @@ local options = {
     lua = { "stylua" },
     csharp = { "csharpier" },
     kotlin = { "ktfmt" },
-    java = { "google-java-format" }
+    java = { "google-java-format" },
+    rust = { "rustfmt" },
     -- css = { "prettier" },
     -- html = { "prettier" },
   },

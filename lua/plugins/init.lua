@@ -22,7 +22,9 @@ return {
         "java-debug-adapter",
         "csharp-language-server",
         "csharpier",
-        "google-java-format"
+        "google-java-format",
+        "rust-analyzer",
+        "rustfmt",
       },
       automatic_installation = true,
     },
@@ -38,7 +40,7 @@ return {
     opts = {
       ensure_installed = {
         "vim", "lua", "vimdoc",
-        "html", "css", "kotlin", "java", "c_sharp"
+        "html", "css", "kotlin", "java", "c_sharp", "rust"
       },
     },
   }
