@@ -139,6 +139,8 @@ require("gen").prompts = {
     replace = false,
     extract = "",
   },
+  Chat = { prompt = "$input" },
+  Ask = { prompt = "Regarding the following code, $input\n```$filetype\n...\n```:\n```$filetype\n$text\n```" },
 }
 --------------------------------------------------------------------- OLLAMA GEN.NVIM END
 
