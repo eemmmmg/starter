@@ -99,8 +99,41 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-require('gen').prompts['Fix_Code'] = {
-  prompt = "Fix the following code. Only output the result in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
-  replace = true,
-  extract = "```$filetype\n(.-)```"
+require('gen').prompts = {
+  Fix_Code = {
+    prompt = "Look at the following code and identify and fix bugs or problems. Make the necessary changes. Also do not explain what you did or comment on anything just provide code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    replace = true,
+    extract = "```$filetype\n(.-)```"
+  },
+  Improve_Performance = {
+    prompt = "Look at the following code and try to enhance the performance. Make the necessary changes. Also do not explain what you did or comment on anything just provide code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    replace = true,
+    extract = "```$filetype\n(.-)```"
+  },
+  Improve_Readability = {
+    prompt = "Look at the following code and enhance it for readability. Make the necessary changes. Also do not explain what you did or comment on anything just provide code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    replace = true,
+    extract = "```$filetype\n(.-)```"
+  },
+  Add_Comments = {
+    prompt = "Look at the following code and add comments. Make the necessary changes. Also do not explain what you did or comment on anything just provide the commented code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    replace = true,
+    extract = "```$filetype\n(.-)```"
+  },
+  Simplify = {
+    prompt = "Look at the following code and simplify it as much as possible. Make the necessary changes. Also do not explain what you did or comment on anything just provide the commented code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    replace = true,
+    extract = "```$filetype\n(.-)```"
+  },
+  Create_Unit_Tests = {
+    prompt = "Look at the following code and create unit tests. Create a comment and provide the unit tests code. Also do not explain what you did or comment on anything just provide the commented code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    replace = false,
+    extract = ""
+  },
+  Review_Code = {
+    prompt = "Review the following code and make concise suggestions:\n```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    replace = false,
+    extract = ""
+  }
 }
+
