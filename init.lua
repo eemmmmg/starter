@@ -110,12 +110,12 @@ require("gen").prompts = {
     extract = "```$filetype\n(.-)```",
   },
   Improve_Performance = {
-    prompt = "Look at the following code and try to enhance the performance. Make the necessary changes. Also do not explain what you did or comment on anything just provide code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    prompt = "Look at the following code and try to enhance the performance while maintaining readability. Make the necessary changes. Also do not explain what you did or comment on anything just provide code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
     replace = true,
     extract = "```$filetype\n(.-)```",
   },
   Improve_Readability = {
-    prompt = "Look at the following code and enhance it for readability. Make the necessary changes. Also do not explain what you did or comment on anything just provide code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    prompt = "Look at the following code and enhance it for readability while keeping in mind performance. Make the necessary changes. Also do not explain what you did or comment on anything just provide code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
     replace = true,
     extract = "```$filetype\n(.-)```",
   },
