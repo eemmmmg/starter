@@ -116,7 +116,7 @@ require('gen').prompts = {
     extract = "```$filetype\n(.-)```"
   },
   Add_Comments = {
-    prompt = "Look at the following code and add comments. Make the necessary changes. Also do not explain what you did or comment on anything just provide the commented code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    prompt = "Look at the following code and add a concise comment explaining the primary purpose. Also do not explain what you did or comment on anything just provide the commented code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
     replace = true,
     extract = "```$filetype\n(.-)```"
   },
