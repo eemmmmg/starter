@@ -23,6 +23,7 @@ require("lazy").setup({
   },
 
   { import = "plugins" },
+  { "gen.nvim", lazy = false },
 }, lazy_config)
 
 -- load theme
