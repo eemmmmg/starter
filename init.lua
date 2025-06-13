@@ -110,7 +110,7 @@ require("gen").prompts = {
     extract = "```$filetype\n(.-)```",
   },
   Improve_Performance = {
-    prompt = "Look at the following code and try to enhance the performance while maintaining readability. Make the necessary changes. Also do not explain what you did or comment on anything just provide code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    prompt = "Look at the following code and try to improve performance while maintaining readability. Make the necessary changes. Also do not explain what you did or comment on anything just provide code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
     replace = true,
     extract = "```$filetype\n(.-)```",
   },
@@ -120,7 +120,7 @@ require("gen").prompts = {
     extract = "```$filetype\n(.-)```",
   },
   Add_Comments = {
-    prompt = "Look at the following code and add a concise comment explaining the primary purpose. Also do not explain what you did or comment on anything just provide the commented code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    prompt = "Look at the following code and add a concise comment explaining the primary purpose, and explain any parameters and what they're used for. Also do not explain what you did or comment on anything just provide the commented code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
     replace = true,
     extract = "```$filetype\n(.-)```",
   },
@@ -130,17 +130,19 @@ require("gen").prompts = {
     extract = "```$filetype\n(.-)```",
   },
   Create_Unit_Tests = {
-    prompt = "Look at the following code and create unit tests. Create a comment and provide the unit tests code. Also do not explain what you did or comment on anything just provide the commented code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    prompt = "Look at the following code and create unit tests. Do not mock any private methods or variables. Create a comment and provide the unit tests code. Also do not explain what you did or comment on anything just provide the commented code in format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
     replace = false,
     extract = "",
   },
   Review_Code = {
-    prompt = "Review the following code and make concise suggestions:\n```$filetype\n...\n```:\n```$filetype\n$text\n```",
+    prompt = "Review the following code and make concise suggestions to improve readability, improve performance, fix any obvious bugs, etc.:\n```$filetype\n...\n```:\n```$filetype\n$text\n```",
     replace = false,
     extract = "",
   },
   Chat = { prompt = "$input" },
-  Ask = { prompt = "Regarding the following code, $input\n```$filetype\n...\n```:\n```$filetype\n$text\n```" },
+  Ask_About_Code = {
+    prompt = "Regarding the following code, $input\n```$filetype\n...\n```:\n```$filetype\n$text\n```",
+  },
 }
 --------------------------------------------------------------------- OLLAMA GEN.NVIM END
 
